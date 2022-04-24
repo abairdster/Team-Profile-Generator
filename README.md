@@ -12,7 +12,7 @@ The Team Profile Generator is a command-line-input application run in Node that 
 
 ### <center>*Getting Started*</center>
 
-Upon launching the app, the user is asked to describe the first member of their team.  The user enters the team member's name, selects that member's role from a list: Engineer,Intern and Manager.,Then User enters: the member's ID, enters the member's email address and then must enter another piece of information that will differ depending on what role was selected.  If Engineer was selected, the app asks the user for the team member's GitHub username. If Intern was selected; the member's school is requested. If Manager was chosen, the user is prompted for the team member's phone number. When all information on the team 
+User launchs the application they are asked to describe the first member of their team.  The user then enters the team member's name and selects that member's role from a list: Engineer,Intern and Manager. User then enters: the member's ID, enters the member's email address and they must enter another piece of information that will depend on what role the User selected.  If Engineer was selected the app asks for the users team member's GitHub username. If Intern was selected the team members school is requested. 
 
 
 
@@ -43,8 +43,7 @@ This app was created using OOP(Object-Oriented Programming). Using constructors 
  ## *Installing*
 
 
- Jest is used to perform tests on all the class constructors to ensure that they behave as expected.  The FS node module is used to generate an HTML file from strings written in JavaScript.  Since the app will work no matter how many team members the user adds to the system, the HTML is built in a piecemeal fashion, starting with the head and part of the body.  For each team member object created, a new column with a card inside containing the team member information is added.  Then when the last member has been added, the last bit of the HTML is added to the file.  One complication experienced during this process was that since the fs.appendFile method is asynchronous, the bottom part of the HTML could be added before the HTML containing information on the last team member had been added.  In order to deal with this, the function that adds the team member information to the HTML was converted into a promise, and only once the promise was resolved would the bottom part of the HTML be added to the output file.
-
+ Jest is used to perform tests on all the class constructors. The FS node module is used to generate an HTML file from strings written in JavaScript.  Since the app will work no matter how many team members the user adds to the system. The HTML is built in a piece by piece mode. It all starts with the head and part of the body.  For each team member the object is created. A new column with a card inside containing the team member information is added.  Then when the last member has been added the last piece of the HTML is added to the file.
 
 
 
