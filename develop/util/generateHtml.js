@@ -1,5 +1,5 @@
 // create the team
-const generateTeam = team => {
+const generateHtml = team => {
 
     // create the manager html
     const generateManager = manager => {
