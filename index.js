@@ -9,9 +9,9 @@ const fs = require('fs');
 const generateHtml = require(`./util/generateHtml`);
 
 //team Profile packages needed fot this app
-const Manager = require(`./Manager`);
-const Engineer= require(`./Engineer`);
-const Intern = require(`./Intern`);
+const Manager = require(`./develop/library/Manager`);
+const Engineer= require(`./develop/library/Engineer`);
+const Intern = require(`./develop/library/Intern`);
 
 
 // create an array of questions for team input
