@@ -1,19 +1,22 @@
-//link to page creation 
-const generateHtml = require(`./util/generateHtml`)
+// open in terminal
+// ask user questions for questions 
+// use inquirer to ask questions
+// gather answers for file
+//us fs for team profile generator 
+//link output html to page creation 
+const inquire = require('inquirer');
+const fs = require('fs');
+const generateHtml = require(`./util/generateHtml`);
 
-//team Profile
+//team Profile packages needed fot this app
 const Manager = require(`./Manager`);
 const Engineer= require(`./Engineer`);
 const Intern = require(`./Intern`);
 
-//node module
-const fs = require('fs');
-const inquire = require('inquire')
 
-//team array
-const teamArray = [];
-
-//start manager prompts
+// create an array of questions for team input
+const teamArray = []
+    //start manager prompts
 const addManager = () => {
     return inquirer.prompt ([
         {
@@ -70,6 +73,7 @@ const addManager = () => {
             }
         }
     ])
+
     .then(managerInput => {
         const  { name, id, email, officeNumber } = managerInput; 
         const manager = new Manager (name, id, email, officeNumber);
@@ -83,6 +87,9 @@ const addEmployee = () => {
     console.log(`
     Adding employees to the team
     `);
+
+
+
     
     
 
